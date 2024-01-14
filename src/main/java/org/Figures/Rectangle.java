@@ -40,4 +40,12 @@ public class Rectangle implements Figure {
         if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException("Invalid side length");
         return 2 * firstSide + 2 * secondSide;
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "firstSide=" + firstSide +
+                ", secondSide=" + secondSide +
+                '}';
+    }
 }

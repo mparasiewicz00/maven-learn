@@ -6,6 +6,5 @@ public abstract class ShapeFactory {
         figure.build();
         return figure;
     }
-
     protected abstract Figure createFigures();
 }

@@ -20,7 +20,7 @@ public class Runner {
         ((Rectangle) rectangle).setSecondSide(4);
 
         Figure square = squareFactory.create();
-        ((Square) square).setSide(10);
+        ((Square) square).setSide(4);
 
         figures.add(circle);
         figures.add(rectangle);
@@ -35,3 +35,5 @@ public class Runner {
 
     }
 }
+
+

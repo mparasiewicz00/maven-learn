@@ -31,4 +31,11 @@ public class Square implements Figure {
         if (side <= 0) throw new IllegalArgumentException("Invalid side length");
         return side * 4;
     }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}';
+    }
 }
