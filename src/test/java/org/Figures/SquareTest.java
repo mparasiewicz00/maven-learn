@@ -6,36 +6,49 @@ import static org.junit.jupiter.api.Assertions.*;
 public class SquareTest {
 
     @Test
-    public void squareAreaWithPositiveArgument() {
+    void squareAreaWithPositiveArgument() {
         int side = 5;
 
-        int result = Square.squareArea(side);
+        int result = Square.area(side);
 
         assertEquals(25, result);
 
     }
 
     @Test
-    public void squareAreaWithNegativeArgument() {
+    void squareAreaWithZero() {
+        int side = 0;
+
+        assertThrows(IllegalArgumentException.class, () -> Square.area(side));
+    }
+
+    @Test
+    void squareAreaWithNegativeArgument() {
         int side = -3;
 
-        assertThrows(IllegalArgumentException.class, () -> Square.squareArea(side));
+        assertThrows(IllegalArgumentException.class, () -> Square.area(side));
     }
 
     @Test
     void squareCircuitWithPositiveArgument() {
         int side = 10;
 
-        int result = Square.squareCircuit(side);
+        int result = Square.circuit(side);
 
         assertEquals(40, result);
-
     }
 
     @Test
-    public void squareCircuitWithNegativeArgument() {
+    void CircuitAreaWithZero() {
+        int side = 0;
+
+        assertThrows(IllegalArgumentException.class, () -> Square.circuit(side));
+    }
+
+    @Test
+    void squareCircuitWithNegativeArgument() {
         int side = -3;
 
-        assertThrows(IllegalArgumentException.class, () -> Square.squareCircuit(side));
+        assertThrows(IllegalArgumentException.class, () -> Square.circuit(side));
     }
 }
