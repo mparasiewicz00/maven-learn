@@ -1,6 +1,6 @@
 package org.Figures;
 
-public class SquareFactory extends ShapeFactory{
+public class SquareFactory extends ShapeFactory {
 
     @Override
     protected Figure createFigures() {

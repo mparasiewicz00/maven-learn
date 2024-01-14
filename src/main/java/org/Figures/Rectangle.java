@@ -4,10 +4,8 @@ public class Rectangle implements Figure {
 
     private int firstSide;
     private int secondSide;
-    private int area;
-    private int circuit;
 
-    public Rectangle(){
+    public Rectangle() {
     }
 
     @Override
@@ -33,21 +31,13 @@ public class Rectangle implements Figure {
 
     @Override
     public double getArea() {
-        return (double)area;
+        if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException("Invalid side length");
+        return (double) firstSide * secondSide;
     }
 
     @Override
     public double getCircuit() {
-        return (double)circuit;
-    }
-
-    public static int area(int firstSide, int secondSide) {
-        if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException();
-        return firstSide * secondSide;
-    }
-
-    public static int circuit(int firstSide, int secondSide) {
-        if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException();
+        if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException("Invalid side length");
         return 2 * firstSide + 2 * secondSide;
     }
 }

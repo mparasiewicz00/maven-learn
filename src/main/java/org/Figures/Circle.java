@@ -1,12 +1,8 @@
 package org.Figures;
 
-
-
 public class Circle implements Figure {
 
     private int radius;
-    private double area;
-    private double circuit;
 
     public Circle() {
     }
@@ -16,12 +12,16 @@ public class Circle implements Figure {
         System.out.println("Creating a circle");
     }
 
+    @Override
     public double getArea() {
-        return area;
+        if (radius <= 0) throw new IllegalArgumentException("Invalid radius");
+        return Math.PI * Math.pow(radius, 2);
     }
 
+    @Override
     public double getCircuit() {
-        return circuit;
+        if (radius <= 0) throw new IllegalArgumentException("Invalid radius");
+        return 2 * Math.PI * radius;
     }
 
     public void setRadius(int radius) {
@@ -31,18 +31,4 @@ public class Circle implements Figure {
     public int getRadius() {
         return radius;
     }
-
-
-    public static double area(int radius) {
-        if ( radius <= 0) throw new IllegalArgumentException();
-        return Math.round(Math.PI * Math.pow(radius,2));
-    }
-
-
-    public static double circuit(int radius) {
-        if ( radius <= 0) throw new IllegalArgumentException();
-        return Math.round(2 * (Math.PI * radius));
-    }
-
-
 }

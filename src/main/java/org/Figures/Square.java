@@ -1,11 +1,15 @@
 package org.Figures;
 
 public class Square implements Figure {
+
     private int side;
-    private int area;
-    private int circuit;
 
     public Square() {
+    }
+
+    @Override
+    public void build() {
+        System.out.println("Creating a square");
     }
 
     public void setSide(int side) {
@@ -17,29 +21,14 @@ public class Square implements Figure {
     }
 
     @Override
-    public void build() {
-        System.out.println("Creating a square");
-    }
-
-    @Override
     public double getArea() {
-        return (double)area;
+        if (side <= 0) throw new IllegalArgumentException("Invalid side length");
+        return (double) side * side;
     }
 
     @Override
     public double getCircuit() {
-        return (double)circuit;
-    }
-
-    public static int area(int side) {
-        if(side <= 0) throw new IllegalArgumentException();
-        return side * side;
-    }
-
-    public static int circuit(int side) {
-        if(side <= 0) throw new IllegalArgumentException();
+        if (side <= 0) throw new IllegalArgumentException("Invalid side length");
         return side * 4;
     }
-
-
 }
