@@ -5,6 +5,9 @@ public class Square implements Figure {
     private int area;
     private int circuit;
 
+    public Square() {
+    }
+
     public void setSide(int side) {
         this.side = side;
     }
@@ -15,7 +18,7 @@ public class Square implements Figure {
 
     @Override
     public void build() {
-
+        System.out.println("Creating a square");
     }
 
     @Override

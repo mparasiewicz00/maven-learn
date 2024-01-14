@@ -8,6 +8,14 @@ public class Circle implements Figure {
     private double area;
     private double circuit;
 
+    public Circle() {
+    }
+
+    @Override
+    public void build() {
+        System.out.println("Creating a circle");
+    }
+
     public double getArea() {
         return area;
     }
@@ -24,10 +32,7 @@ public class Circle implements Figure {
         return radius;
     }
 
-    @Override
-    public void build() {
 
-    }
     public static double area(int radius) {
         if ( radius <= 0) throw new IllegalArgumentException();
         return Math.round(Math.PI * Math.pow(radius,2));

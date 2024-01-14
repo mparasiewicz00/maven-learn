@@ -7,6 +7,14 @@ public class Rectangle implements Figure {
     private int area;
     private int circuit;
 
+    public Rectangle(){
+    }
+
+    @Override
+    public void build() {
+        System.out.println("Creating a rectangle");
+    }
+
     public void setFirstSide(int firstSide) {
         this.firstSide = firstSide;
     }
@@ -21,11 +29,6 @@ public class Rectangle implements Figure {
 
     public int getSecondSide() {
         return secondSide;
-    }
-
-    @Override
-    public void build() {
-
     }
 
     @Override
