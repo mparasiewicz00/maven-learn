@@ -2,9 +2,19 @@ package org.Figures;
 
 
 
-public class Circle implements Figures {
+public class Circle implements Figure {
 
     private int radius;
+    private double area;
+    private double circuit;
+
+    public double getArea() {
+        return area;
+    }
+
+    public double getCircuit() {
+        return circuit;
+    }
 
     public void setRadius(int radius) {
         this.radius = radius;

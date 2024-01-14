@@ -1,9 +1,11 @@
 package org.Figures;
 
-public class Rectangle implements Figures {
+public class Rectangle implements Figure {
 
     private int firstSide;
     private int secondSide;
+    private int area;
+    private int circuit;
 
     public void setFirstSide(int firstSide) {
         this.firstSide = firstSide;
@@ -24,6 +26,16 @@ public class Rectangle implements Figures {
     @Override
     public void build() {
 
+    }
+
+    @Override
+    public double getArea() {
+        return (double)area;
+    }
+
+    @Override
+    public double getCircuit() {
+        return (double)circuit;
     }
 
     public static int area(int firstSide, int secondSide) {

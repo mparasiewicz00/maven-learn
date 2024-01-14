@@ -1,8 +1,9 @@
 package org.Figures;
 
-public class Square implements Figures {
-
+public class Square implements Figure {
     private int side;
+    private int area;
+    private int circuit;
 
     public void setSide(int side) {
         this.side = side;
@@ -15,6 +16,16 @@ public class Square implements Figures {
     @Override
     public void build() {
 
+    }
+
+    @Override
+    public double getArea() {
+        return (double)area;
+    }
+
+    @Override
+    public double getCircuit() {
+        return (double)circuit;
     }
 
     public static int area(int side) {
