@@ -1,5 +1,7 @@
 package org.Figures;
 
+
+
 public class Circle implements Figures {
 
     private int radius;
@@ -16,15 +18,15 @@ public class Circle implements Figures {
     public void build() {
 
     }
-
-    public double area(int radius) {
+    public static double area(int radius) {
         if ( radius <= 0) throw new IllegalArgumentException();
-        return Math.PI * Math.sqrt(radius);
+        return Math.round(Math.PI * Math.pow(radius,2));
     }
 
-    public double circuit(int radius) {
+
+    public static double circuit(int radius) {
         if ( radius <= 0) throw new IllegalArgumentException();
-        return 2 * Math.PI * radius;
+        return Math.round(2 * (Math.PI * radius));
     }
 
 

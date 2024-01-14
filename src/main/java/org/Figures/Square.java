@@ -17,12 +17,12 @@ public class Square implements Figures {
 
     }
 
-    public int area(int side) {
+    public static int area(int side) {
         if(side <= 0) throw new IllegalArgumentException();
         return side * side;
     }
 
-    public int circuit(int side) {
+    public static int circuit(int side) {
         if(side <= 0) throw new IllegalArgumentException();
         return side * 4;
     }

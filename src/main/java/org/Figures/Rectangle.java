@@ -26,12 +26,12 @@ public class Rectangle implements Figures {
 
     }
 
-    public int area(int firstSide, int secondSide) {
+    public static int area(int firstSide, int secondSide) {
         if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException();
         return firstSide * secondSide;
     }
 
-    public int circuit(int firstSide, int secondSide) {
+    public static int circuit(int firstSide, int secondSide) {
         if (firstSide <= 0 || secondSide <= 0) throw new IllegalArgumentException();
         return 2 * firstSide + 2 * secondSide;
     }
